@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lalrix — Galaxy Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Bebas Neue', 'Anton', Impact, system-ui, sans-serif; }
+
+    /* Title glow + blink */
+    @keyframes glowBlink {
+      0%, 100% { text-shadow: 0 0 8px #ff66cc, 0 0 20px #cc33ff, 0 0 40px #66ccff; opacity: 1; }
+      50% { text-shadow: 0 0 20px #ff3399, 0 0 40px #ff66cc, 0 0 60px #66ccff; opacity: 0.7; }
+    }
+    .anime-title { animation: glowBlink 3s infinite ease-in-out; }
+
+    /* Social hover glow */
+    .social-link i {
+      transition: all 0.3s ease-in-out;
+    }
+    .social-link:hover i {
+      text-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+      transform: scale(1.2);
+    }
+    .social-text { opacity: 0; transform: translateX(-20px); transition: all 0.4s ease; }
+    .social-link:hover .social-text { opacity: 1; transform: translateX(0); }
+
+    /* Video hover glow */
+    .video-thumb {
+      transition: all 0.4s ease-in-out;
+    }
+    .video-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.7), 0 0 40px rgba(100, 149, 237, 0.6);
+    }
+
+    /* Animations */
+    @keyframes fadeInLeft { from {opacity:0;transform:translateX(-80px);} to {opacity:1;transform:translateX(0);} }
+    @keyframes fadeInRight { from {opacity:0;transform:translateX(80px);} to {opacity:1;transform:translateX(0);} }
+    @keyframes fadeOut { from {opacity:1;} to {opacity:0;} }
+    .fade-in-left { animation: fadeInLeft 1s ease-out forwards; }
+    .fade-in-right { animation: fadeInRight 1s ease-out forwards; }
+    .fade-out { animation: fadeOut 0.6s ease-in forwards; }
+
+    header { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  </style>
+</head>
+<body class="p-0 m-0">
+
+  <!-- Header -->
+  <header>
+    <!-- Title -->
+    <h1 class="text-5xl md:text-7xl font-display mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 text-transparent bg-clip-text anime-title">
+      lalrix — Creator & Editor
+    </h1>
+    <p class="text-gray-300 text-md md:text-xl px-4">Cosmic edits, high-energy visuals, storytelling beyond the stars.</p>
+
+    <!-- Social bar left side -->
+    <div class="fixed left-4 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+      <a href="https://youtube.com/@lalrix" target="_blank" class="social-link flex items-center gap-3 text-red-500 text-xl">
+        <i class="fab fa-youtube fa-2x"></i><span class="social-text">YouTube</span>
+      </a>
+      <a href="https://www.instagram.com/lalrix_/" target="_blank" class="social-link flex items-center gap-3 text-pink-400 text-xl">
+        <i class="fab fa-instagram fa-2x"></i><span class="social-text">Instagram</span>
+      </a>
+      <a href="https://www.artstation.com/lalrixnull1" target="_blank" class="social-link flex items-center gap-3 text-blue-400 text-xl">
+        <i class="fab fa-artstation fa-2x"></i><span class="social-text">ArtStation</span>
+      </a>
+      <a href="https://discord.gg/Ancq6DcE9T" target="_blank" class="social-link flex items-center gap-3 text-indigo-400 text-xl">
+        <i class="fab fa-discord fa-2x"></i><span class="social-text">Discord</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Works Section -->
+  <section id="works">
+    <div class="max-w-6xl mx-auto space-y-24 py-20 px-4">
+      
+      <!-- Work 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <a href="https://www.youtube.com/watch?v=6Z5jhPwaLYg" target="_blank"
+           class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg shadow-pink-500/40 video-thumb opacity-0">
+          <img src="https://img.youtube.com/vi/6Z5jhPwaLYg/hqdefault.jpg" alt="Work 1" class="w-full">
+        </a>
+        <div class="w-full md:w-1/2 text-left opacity-0">
+          <h3 class="text-2xl md:text-3xl font-display mb-3 text-pink-400">VFX & Animation</h3>
+          <p class="text-gray-300">High-energy visual effects and anime-inspired motion edits. Using After Effects and compositing to create stunning cosmic vibes.</p>
+        </div>
+      </div>
+
+      <!-- Work 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <a href="https://www.youtube.com/watch?v=LZwcm_dX-H8" target="_blank"
+           class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg shadow-blue-500/40 video-thumb opacity-0">
+          <img src="https://img.youtube.com/vi/LZwcm_dX-H8/hqdefault.jpg" alt="Work 2" class="w-full">
+        </a>
+        <div class="w-full md:w-1/2 text-left opacity-0">
+          <h3 class="text-2xl md:text-3xl font-display mb-3 text-blue-400">Editing & Storytelling</h3>
+          <p class="text-gray-300">Fast-paced editing with rhythm and flow. Storytelling through transitions, cuts, and dynamic pacing.</p>
+        </div>
+      </div>
+
+      <!-- Work 3 -->
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <a href="https://www.youtube.com/watch?v=IdHNTmowMAc" target="_blank"
+           class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg shadow-purple-500/40 video-thumb opacity-0">
+          <img src="https://img.youtube.com/vi/IdHNTmowMAc/hqdefault.jpg" alt="Work 3" class="w-full">
+        </a>
+        <div class="w-full md:w-1/2 text-left opacity-0">
+          <h3 class="text-2xl md:text-3xl font-display mb-3 text-purple-400">3D Animation (Blender)</h3>
+          <p class="text-gray-300">Creating scenes, models, and renders in Blender. Mixing 3D with VFX to expand the cosmic storytelling universe.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Intersection observer for fade in/out
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.dataset.side === "left") {
+            entry.target.classList.remove("opacity-0", "fade-out");
+            entry.target.classList.add("fade-in-left");
+          } else {
+            entry.target.classList.remove("opacity-0", "fade-out");
+            entry.target.classList.add("fade-in-right");
+          }
+        } else {
+          entry.target.classList.remove("fade-in-left", "fade-in-right");
+          entry.target.classList.add("fade-out");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll("a.video-thumb, div.w-full.md\\:w-1\\/2.text-left").forEach((el, i) => {
+      el.dataset.side = i % 2 === 0 ? "left" : "right";
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
